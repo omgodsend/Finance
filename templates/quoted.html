@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <div>
+        <h1>{{ stock.name }}</h1>
+        <p></p>
+        <div class="price-container">
+            <h3>Price: ${{ stock.price }}</h3>
+        </div>
+    <p></p>
+    <form action="/quote" method="get">
+        <button class="btn btn-primary" type="submit">Quote Another</button>
+    </form>
+{% endblock %}
